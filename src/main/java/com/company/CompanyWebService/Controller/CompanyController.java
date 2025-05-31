@@ -41,6 +41,7 @@ public class CompanyController {
 	@PostMapping(value="/createCompany")
 	public GenericResponse createCompany( @RequestHeader("Authorization") String authorization,@RequestHeader("Role") String role,  @RequestBody Company company) {
 
+		System.out.println("inside createCompany()");
 		GenericResponse genericResponse;
 		System.out.println("Authorization: "+authorization);
 		System.out.println("Role: "+role);
