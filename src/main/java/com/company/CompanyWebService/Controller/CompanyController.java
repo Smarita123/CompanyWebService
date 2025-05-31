@@ -41,6 +41,7 @@ public class CompanyController {
 	@PostMapping(value="/createCompany")
 	public GenericResponse createCompany( @RequestHeader("Authorization") String authorization,@RequestHeader("Role") String role,  @RequestBody Company company) {
 		System.out.println("inside createCompany() method");
+		System.out.println("inside createCompany()");
 		GenericResponse genericResponse;
 		System.out.println("Authorization: "+authorization);
 		System.out.println("Role: "+role);
@@ -64,7 +65,7 @@ public class CompanyController {
 	public GenericResponse viewCompany( @RequestHeader("Authorization") String authorization,@RequestHeader("Role") String role) {
 		System.out.println("Authorization: "+authorization);
 		System.out.println("Role: "+role);
-		System.out.println("***");
+	
 		if (role.equalsIgnoreCase("admin")) {
 			return companyservice.viewCompanyService();
 			//return new ResponseEntity<>(companyservice.viewCompanyService(), HttpStatus.OK);
