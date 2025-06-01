@@ -40,8 +40,9 @@ public class CompanyController {
 
 	@PostMapping(value="/createCompany")
 	public GenericResponse createCompany( @RequestHeader("Authorization") String authorization,@RequestHeader("Role") String role,  @RequestBody Company company) {
-		System.out.println("making changes in feature branch ....");
+		System.out.println("making changes in feature branch");
 		System.out.println("inside createCompany() method");
+		System.out.println("Changes in master branch");
 		System.out.println("inside createCompany()");
 		GenericResponse genericResponse;
 		System.out.println("Authorization: "+authorization);
@@ -64,7 +65,6 @@ public class CompanyController {
 			produces = { MediaType.APPLICATION_JSON_VALUE, 
 					MediaType.APPLICATION_XML_VALUE})
 	public GenericResponse viewCompany( @RequestHeader("Authorization") String authorization,@RequestHeader("Role") String role) {
-		System.out.println("Inside viewCompany()");
 		System.out.println("Authorization: "+authorization);
 		System.out.println("Role: "+role);
 	
