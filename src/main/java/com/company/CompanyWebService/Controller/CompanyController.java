@@ -65,6 +65,7 @@ public class CompanyController {
 			produces = { MediaType.APPLICATION_JSON_VALUE, 
 					MediaType.APPLICATION_XML_VALUE})
 	public GenericResponse viewCompany( @RequestHeader("Authorization") String authorization,@RequestHeader("Role") String role) {
+
 		System.out.println("Authorization: "+authorization);
 		System.out.println("Role: "+role);
 	
