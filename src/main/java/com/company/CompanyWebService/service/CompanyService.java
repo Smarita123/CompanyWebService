@@ -28,6 +28,7 @@ public class CompanyService  {
 
 
 	public GenericResponse createCompanyService(Company company) {
+		System.out.println("inside createCompanyService()");
 		CompanyEntity companyEntity =new CompanyEntity();
 		GenericResponse genericResponse= null;
 		companyEntity.setAddress(company.getAddress());
